@@ -79,11 +79,6 @@ a {
   font-size: 16px;
 }
 
-.last-updated {
-  margin-left: 385px;
-  font-size: 12px;
-}
-
 #enter-city {
   display: inline;
   padding: 8px;
@@ -144,6 +139,6 @@ a {
   left: 2px;
 }
 
-#last-updated-link {
-  color: rgb(37, 198, 198);
+#open-source {
+  font-size: 15px;
 }
