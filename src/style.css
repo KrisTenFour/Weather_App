@@ -1,5 +1,5 @@
 body {
-  background: url("C:/Users/queen/Desktop/SheCodes/Plus/Weather_app/images/sky.jpg");
+  background: url("/images/sky.jpg");
 }
 
 a {
@@ -14,7 +14,7 @@ a {
   padding: 40px 25px;
   border-radius: 25mm;
   box-shadow: 1px 1px 10px rgba(122, 122, 122, 0.945);
-  background: url("C:/Users/queen/Desktop/SheCodes/Plus/Weather_app/images/sun.jpg");
+  background: url("/images/sun.jpg");
   text-align: center;
   font-family: "Roboto", sans-serif;
 }
