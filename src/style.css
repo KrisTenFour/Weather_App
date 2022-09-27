@@ -56,8 +56,11 @@ a {
 }
 
 .main-heading {
+  position: relative;
+  left: 15px;
   word-wrap: break-word;
   font-size: 52px;
+  line-height: 85px;
 }
 
 .sub-heading {
@@ -65,8 +68,8 @@ a {
 }
 
 .other-factors {
-  margin: auto 220px;
-  margin-top: 15px;
+  margin: 0 220px;
+  margin-top: 20px;
   padding-left: 12px;
   border-radius: 3mm;
   box-shadow: 1px 2px 3px rgb(122, 121, 121);
