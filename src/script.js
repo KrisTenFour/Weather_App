@@ -1,3 +1,15 @@
+function changeBackground() {
+  let now = new Date();
+  let hours = now.getHours();
+  if (hours >= 19 || hours < 7) {
+    document.body.className = "night";
+  } else {
+    document.body.className = "day";
+  }
+}
+changeBackground();
+setInterval(changeBackground, 1000 * 60 * 1);
+
 function formatDate() {
   let today = new Date();
   let dayIndex = [

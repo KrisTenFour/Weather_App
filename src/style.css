@@ -19,6 +19,14 @@ a {
   font-family: "Roboto", sans-serif;
 }
 
+.night {
+  background: url("../images/nightsky.jpg");
+}
+
+.day {
+  background: url("../images/sky.jpg");
+}
+
 .input-city-container {
   max-width: 350px;
   margin: 10px auto 30px;
