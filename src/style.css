@@ -3,12 +3,18 @@ body {
 }
 
 a {
-  color: rgb(61, 184, 184);
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+p {
+  position: relative;
+  top: 140px;
+  text-align: center;
+  color: #63e0e0e5;
 }
 
 .body-night {
@@ -23,9 +29,9 @@ a:hover {
   max-width: 985px;
   position: relative;
   top: 130px;
-  padding: 40px 25px;
+  padding: 45px 25px 50px;
   border-radius: 25mm;
-  box-shadow: 1px 1px 10px rgba(34, 33, 33, 0.945);
+  box-shadow: 1px 1px 10px #222121f1;
   background: url("../images/container-image.jpg");
   text-align: center;
   font-family: "Roboto", sans-serif;
@@ -40,10 +46,9 @@ a:hover {
   margin-right: 288px;
   padding: 1px 5px;
   font-size: large;
-  background-color: rgba(240, 248, 255, 0.55);
+  background-color: #f0f8ff8c;
   border-radius: 1mm;
-  border-color: rgb(15, 61, 61);
-  box-shadow: 1px 2px 3px rgba(50, 50, 50, 0.4);
+  box-shadow: 1px 2px 3px #32323266;
 }
 
 .current-city-container {
@@ -51,12 +56,8 @@ a:hover {
   margin: 25px auto 10px;
   padding: 30px 16px 35px;
   border-radius: 4mm;
-  box-shadow: 1px 2px 3px rgb(66, 65, 65);
-  background: linear-gradient(
-    to top,
-    rgba(218, 220, 223, 0.761) 0%,
-    rgb(236, 233, 233) 100%
-  );
+  box-shadow: 1px 2px 3px #424141;
+  background: linear-gradient(to top, #dadcdfc2 0%, #ece9e9 100%);
 }
 
 .main-heading {
@@ -76,8 +77,8 @@ a:hover {
   margin-top: 20px;
   padding-left: 12px;
   border-radius: 3mm;
-  box-shadow: 1px 2px 3px rgb(122, 121, 121);
-  background-color: rgba(241, 235, 235, 0.985);
+  box-shadow: 1px 2px 3px #7a7979;
+  background-color: #f1ebebfb;
   font-size: 14px;
 }
 
@@ -89,43 +90,51 @@ a:hover {
   margin: 15px 195px 9px;
   padding: 2px 20px;
   border-radius: 4mm;
-  box-shadow: 1px 2px 5px rgb(71, 71, 71);
-  background-color: rgba(224, 223, 223, 0.934);
+  box-shadow: 1px 2px 5px #474747;
+  background-color: #e0dfdfee;
   font-size: 16px;
 }
 
 #enter-city {
   display: inline;
   padding: 8px;
-  border: 0.3mm solid rgb(172, 171, 171);
+  border: 0.3mm solid #e7e5e5;
   border-radius: 4mm;
-  box-shadow: 1px 2px 3px rgb(123, 122, 122, 0.4);
+  box-shadow: 1px 1px 3px #464646f1;
   font-size: 14px;
 }
 
 #enter-city:focus {
-  border-color: #f1e0c5;
-  box-shadow: 0 1px 1px rgb(247, 236, 209) inset, 0 1px 6px rgb(234, 218, 170);
+  border-color: #74bdc8b6;
+  box-shadow: 0 1px 1px #83cbcbda inset, 0 1px 6px #7de2e2b3;
 }
 
 #btn-search {
-  background-color: rgba(99, 224, 224, 0.897);
+  background-color: #63e0e0e5;
   position: relative;
   top: 2px;
   right: 20px;
   border-radius: 4mm;
-  box-shadow: 1px 2px 3px rgba(50, 50, 50, 0.4);
+  box-shadow: 1px 2px 3px #32323266;
   font-size: 15px;
 }
 
 #btn-current {
-  background-color: rgb(203, 245, 245);
+  background-color: #cbf5f5;
   position: relative;
   top: 2px;
   right: 6px;
   border-radius: 4mm;
-  box-shadow: 1px 2px 3px rgba(50, 50, 50, 0.4);
+  box-shadow: 1px 2px 3px #32323266;
   font-size: 15px;
+}
+
+#celsius {
+  color: #0f8080;
+}
+
+#fahrenheit {
+  color: #0f8080;
 }
 
 #units {
@@ -141,12 +150,12 @@ a:hover {
 
 #current-weather-emoji {
   font-size: 22px;
-  color: rgb(9, 73, 133);
+  color: #094985;
 }
 
 #future-weather-emojis {
   font-size: 40px;
-  color: rgb(255, 213, 0);
+  color: #ffd500;
 }
 
 #future-temp-range {
@@ -156,5 +165,5 @@ a:hover {
 
 #open-source {
   font-size: 15px;
-  color: rgb(2, 60, 60);
+  color: #cbf5f5;
 }
