@@ -1,10 +1,10 @@
 function changeBackground() {
   let now = new Date();
   let hours = now.getHours();
-  if (hours >= 19 || hours < 7) {
-    document.body.className = "night";
+  if (hours >= 21 || hours < 7) {
+    document.body.className = "body-night";
   } else {
-    document.body.className = "day";
+    document.body.className = "body-day";
   }
 }
 changeBackground();
