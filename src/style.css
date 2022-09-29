@@ -7,14 +7,13 @@ a {
 }
 
 a:hover {
+  color: blue;
   text-decoration: underline;
 }
 
 p {
-  position: relative;
-  top: 140px;
-  text-align: center;
   color: #63e0e0e5;
+  font-size: 14px;
 }
 
 .body-night {
@@ -27,13 +26,16 @@ p {
 
 .container {
   max-width: 985px;
-  position: relative;
-  top: 130px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.weather-app {
+  margin-top: 100px;
   padding: 45px 25px 50px;
   border-radius: 25mm;
   box-shadow: 1px 1px 10px #222121f1;
   background: url("../images/container-image.jpg");
-  text-align: center;
   font-family: "Roboto", sans-serif;
 }
 
@@ -42,7 +44,7 @@ p {
   margin: 10px auto 30px;
 }
 
-.celsius-fahrenheit {
+.units-container {
   margin-right: 288px;
   padding: 1px 5px;
   font-size: large;
@@ -52,10 +54,10 @@ p {
 }
 
 .current-city-container {
-  max-width: 650px;
+  max-width: 630px;
   margin: 25px auto 10px;
   padding: 30px 16px 35px;
-  border-radius: 4mm;
+  border-radius: 5mm;
   box-shadow: 1px 2px 3px #424141;
   background: linear-gradient(to top, #dadcdfc2 0%, #ece9e9 100%);
 }
@@ -73,7 +75,7 @@ p {
 }
 
 .other-factors {
-  margin: 0 220px;
+  margin: 0 210px;
   margin-top: 20px;
   padding-left: 12px;
   border-radius: 3mm;
@@ -89,14 +91,13 @@ p {
 .future-forecast-container {
   margin: 15px 195px 9px;
   padding: 2px 20px;
-  border-radius: 4mm;
+  border-radius: 5mm;
   box-shadow: 1px 2px 5px #474747;
   background-color: #e0dfdfee;
   font-size: 16px;
 }
 
 #enter-city {
-  display: inline;
   padding: 8px;
   border: 0.3mm solid #e7e5e5;
   border-radius: 4mm;
@@ -110,34 +111,34 @@ p {
 }
 
 #btn-search {
-  background-color: #63e0e0e5;
   position: relative;
   top: 2px;
   right: 20px;
+  background-color: #63e0e0e5;
   border-radius: 4mm;
   box-shadow: 1px 2px 3px #32323266;
   font-size: 15px;
 }
 
 #btn-current {
-  background-color: #cbf5f5;
   position: relative;
   top: 2px;
   right: 6px;
+  background-color: #cbf5f5;
   border-radius: 4mm;
   box-shadow: 1px 2px 3px #32323266;
   font-size: 15px;
 }
 
-#celsius {
+#celsius-link {
   color: #0f8080;
 }
 
-#fahrenheit {
+#fahrenheit-link {
   color: #0f8080;
 }
 
-#units {
+#unit {
   position: relative;
   bottom: 15px;
   right: 12px;
@@ -164,6 +165,5 @@ p {
 }
 
 #open-source {
-  font-size: 15px;
-  color: #cbf5f5;
+  font-size: 14px;
 }
