@@ -1,7 +1,3 @@
-body {
-  background: url("../images/sky.jpg");
-}
-
 a {
   text-decoration: none;
 }
@@ -144,6 +140,10 @@ p {
 }
 
 #description {
+  display: inline-block;
+}
+
+#description::first-letter {
   text-transform: capitalize;
 }
 
