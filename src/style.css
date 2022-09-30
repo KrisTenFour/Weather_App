@@ -44,6 +44,14 @@ p {
   margin: 10px auto 30px;
 }
 
+.btn {
+  position: relative;
+  top: 2px;
+  border-radius: 4mm;
+  box-shadow: 1px 2px 3px #32323266;
+  font-size: 15px;
+}
+
 .units-container {
   margin-right: 288px;
   padding: 1px 5px;
@@ -67,7 +75,7 @@ p {
   left: 15px;
   word-wrap: break-word;
   font-size: 52px;
-  line-height: 85px;
+  line-height: 1.75;
 }
 
 .sub-heading {
@@ -76,7 +84,7 @@ p {
 
 .other-factors {
   margin: 0 210px;
-  margin-top: 20px;
+  margin-top: 25px;
   padding-left: 12px;
   border-radius: 3mm;
   box-shadow: 1px 2px 3px #7a7979;
@@ -111,23 +119,13 @@ p {
 }
 
 #btn-search {
-  position: relative;
-  top: 2px;
   right: 20px;
   background-color: #63e0e0e5;
-  border-radius: 4mm;
-  box-shadow: 1px 2px 3px #32323266;
-  font-size: 15px;
 }
 
 #btn-current {
-  position: relative;
-  top: 2px;
   right: 6px;
   background-color: #cbf5f5;
-  border-radius: 4mm;
-  box-shadow: 1px 2px 3px #32323266;
-  font-size: 15px;
 }
 
 #celsius-link {
