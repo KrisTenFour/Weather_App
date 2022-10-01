@@ -55,6 +55,12 @@ function formatDate() {
 function displayWeather(response) {
   let maxTemp = Math.round(response.data.main.temp_max);
   let minTemp = Math.round(response.data.main.temp_min);
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
   document.querySelector("#current-temp").innerHTML = Math.round(
     response.data.main.temp
   );
