@@ -68,6 +68,7 @@ p {
 
 .main-heading {
   position: relative;
+  top: 8px;
   left: 15px;
   word-wrap: break-word;
   font-size: 52px;
@@ -80,7 +81,7 @@ p {
 
 .other-factors {
   margin: 0 210px;
-  margin-top: 25px;
+  margin-top: 10px;
   padding-left: 12px;
   border-radius: 3mm;
   box-shadow: 1px 2px 3px #7a7979;
@@ -147,9 +148,9 @@ p {
   text-transform: capitalize;
 }
 
-#current-weather-emoji {
-  font-size: 22px;
-  color: #094985;
+#icon {
+  max-width: 63px;
+  margin-bottom: 6px;
 }
 
 #future-weather-emojis {
