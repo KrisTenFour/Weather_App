@@ -41,8 +41,6 @@ p {
 }
 
 .btn {
-  position: relative;
-  top: 2px;
   border-radius: 4mm;
   box-shadow: 1px 2px 3px #32323266;
   font-size: 15px;
@@ -116,12 +114,10 @@ p {
 }
 
 #btn-search {
-  right: 20px;
   background-color: #63e0e0e5;
 }
 
 #btn-current {
-  right: 6px;
   background-color: #cbf5f5;
 }
 
@@ -150,7 +146,7 @@ p {
 
 #icon {
   max-width: 63px;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
 #future-weather-emojis {
