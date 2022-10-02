@@ -52,6 +52,15 @@ p {
   box-shadow: 1px 2px 3px #32323266;
 }
 
+.units-container .active {
+  color: black;
+  cursor: default;
+}
+
+.units-container .active:hover {
+  text-decoration: none;
+}
+
 .current-city-container {
   max-width: 630px;
   margin: 25px auto 10px;
@@ -122,14 +131,6 @@ p {
 
 #btn-current {
   background-color: #cbf5f5;
-}
-
-#celsius-link {
-  color: #0f8080;
-}
-
-#fahrenheit-link {
-  color: #0f8080;
 }
 
 #unit {
