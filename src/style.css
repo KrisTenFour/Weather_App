@@ -157,11 +157,11 @@ p {
   color: #ffd500;
 }
 
-#future-temp-range {
-  position: relative;
-  left: 2px;
-}
-
 #open-source {
   font-size: 14px;
+  color: black;
+}
+
+#open-source:hover {
+  color: blue;
 }
