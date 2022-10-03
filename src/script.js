@@ -69,7 +69,7 @@ function displayWeather(response) {
   minTempRange = response.data.main.temp_min;
   maxTempRange = response.data.main.temp_max;
   searchForm.addEventListener(
-    "click",
+    "submit",
     fahrenheitLink.classList.remove("active"),
     celsiusLink.classList.add("active")
   );
