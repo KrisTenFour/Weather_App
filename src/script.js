@@ -68,6 +68,11 @@ function displayWeather(response) {
   celsiusTemperature = response.data.main.temp;
   minTempRange = response.data.main.temp_min;
   maxTempRange = response.data.main.temp_max;
+  searchForm.addEventListener(
+    "click",
+    fahrenheitLink.classList.remove("active"),
+    celsiusLink.classList.add("active")
+  );
 
   unitElement.innerHTML = `${unit}`;
   currentTemperatureElement.innerHTML = Math.round(response.data.main.temp);
