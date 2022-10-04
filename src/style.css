@@ -81,6 +81,7 @@ p {
 
 .sub-heading {
   font-size: 16px;
+  color: #686767;
 }
 
 .other-factors {
@@ -93,7 +94,7 @@ p {
 }
 
 .other-factors-emojis {
-  color: rgba(43, 42, 42, 0.7);
+  color: rgba(71, 70, 70, 0.7);
 }
 
 .forecast-container {
@@ -155,6 +156,11 @@ p {
 #icon {
   max-width: 63px;
   margin-bottom: 5px;
+}
+
+#other-factors-humidity,
+#other-factors-wind {
+  color: #686767;
 }
 
 #open-source {
