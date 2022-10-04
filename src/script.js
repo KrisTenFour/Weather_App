@@ -110,6 +110,27 @@ function retrievePosition(position) {
   axios.get(apiUrl).then(displayWeather);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class= "row">`;
+  forecastHTML =
+    forecastHTML +
+    `<div class="col-2">
+            <div class="forecast-days">Mon</div>
+            <div class="forecast-weather-emojis"><i class="fa-solid fa-sun"></i></div>
+            <div class="forecast-temp-range">
+              <span class="forecast-temp-range-min"> 20°</span>|<span
+                class="forecast-temp-range-max"
+                >25°</span>
+            </div>
+          </div>
+          </div>`;
+
+  forecastHTML = forecastHTML + `<div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let unit = `°F`;
@@ -165,3 +186,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 searchCity("London");
+displayForecast();
