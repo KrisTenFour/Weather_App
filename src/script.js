@@ -112,21 +112,22 @@ function retrievePosition(position) {
 
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
   let forecastHTML = `<div class= "row">`;
-  forecastHTML =
-    forecastHTML +
-    `<div class="col-2">
-            <div class="forecast-days">Mon</div>
-            <div class="forecast-weather-emojis"><i class="fa-solid fa-sun"></i></div>
-            <div class="forecast-temp-range">
-              <span class="forecast-temp-range-min"> 20°</span>|<span
-                class="forecast-temp-range-max"
-                >25°</span>
-            </div>
-          </div>
-          </div>`;
-
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+              <div class="forecast-days">${day}</div>
+              <div class="forecast-weather-emojis"><i class="fa-solid fa-sun"></i></div>
+              <div class="forecast-temp-range">
+                <span class="forecast-temp-range-min"> 20°</span>|<span
+                  class="forecast-temp-range-max"
+                  >25°</span>
+              </div>
+            </div>`;
+  });
   forecastHTML = forecastHTML + `<div>`;
   forecastElement.innerHTML = forecastHTML;
 }
