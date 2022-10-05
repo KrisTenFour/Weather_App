@@ -105,7 +105,6 @@ function displayWeather(response) {
   let currentTemperatureElement = document.querySelector("#current-temp");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
-  let currentTempRangeElement = document.querySelector("#current-temp-range");
   let humidityElement = document.querySelector("#humidity-level");
   let windElement = document.querySelector("#wind-level");
   let iconElement = document.querySelector("#icon");
@@ -116,7 +115,6 @@ function displayWeather(response) {
   currentTemperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
-  currentTempRangeElement.innerHTML = `${minTemp}°|${maxTemp}°`;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   iconElement.setAttribute(
@@ -164,14 +162,12 @@ function displayFahrenheitTemperature(event) {
   let unit = `°F`;
   let unitElement = document.querySelector("#unit");
   let temperatureElement = document.querySelector("#current-temp");
-  let tempRangeElement = document.querySelector("#current-temp-range");
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   let minTempRangeElement = Math.round((minTempRange * 9) / 5 + 32);
   let maxTempRangeElement = Math.round((maxTempRange * 9) / 5 + 32);
 
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
   unitElement.innerHTML = `${unit}`;
-  tempRangeElement.innerHTML = `${minTempRangeElement}°|${maxTempRangeElement}°`;
 
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
@@ -182,13 +178,9 @@ function displayCelsiusTemperature(event) {
   let unit = `°C`;
   let unitElement = document.querySelector("#unit");
   let temperatureElement = document.querySelector("#current-temp");
-  let tempRangeElement = document.querySelector("#current-temp-range");
 
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   unitElement.innerHTML = `${unit}`;
-  tempRangeElement.innerHTML = `${Math.round(minTempRange)}°|${Math.round(
-    maxTempRange
-  )}°`;
 
   fahrenheitLink.classList.remove("active");
   celsiusLink.classList.add("active");
