@@ -43,24 +43,6 @@ p {
   font-size: 15px;
 }
 
-.units-container {
-  margin-right: 288px;
-  padding: 1px 5px;
-  font-size: large;
-  background-color: #f0f8ff8c;
-  border-radius: 1mm;
-  box-shadow: 1px 2px 3px #32323266;
-}
-
-.units-container .active {
-  color: black;
-  cursor: default;
-}
-
-.units-container .active:hover {
-  text-decoration: none;
-}
-
 .current-city-container {
   max-width: 630px;
   margin: 25px auto 10px;

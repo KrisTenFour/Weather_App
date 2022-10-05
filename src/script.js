@@ -108,8 +108,6 @@ function displayWeather(response) {
   let humidityElement = document.querySelector("#humidity-level");
   let windElement = document.querySelector("#wind-level");
   let iconElement = document.querySelector("#icon");
-  let maxTemp = Math.round(response.data.main.temp_max);
-  let minTemp = Math.round(response.data.main.temp_min);
 
   unitElement.innerHTML = `${unit}`;
   currentTemperatureElement.innerHTML = Math.round(response.data.main.temp);
@@ -122,15 +120,6 @@ function displayWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
-
-  celsiusTemperature = response.data.main.temp;
-  minTempRange = response.data.main.temp_min;
-  maxTempRange = response.data.main.temp_max;
-  searchForm.addEventListener(
-    "submit",
-    fahrenheitLink.classList.remove("active"),
-    celsiusLink.classList.add("active")
-  );
 
   getForecast(response.data.coord);
 }
@@ -157,39 +146,6 @@ function getPosition(position) {
   axios.get(apiUrl).then(displayWeather);
 }
 
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  let unit = `°F`;
-  let unitElement = document.querySelector("#unit");
-  let temperatureElement = document.querySelector("#current-temp");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  let minTempRangeElement = Math.round((minTempRange * 9) / 5 + 32);
-  let maxTempRangeElement = Math.round((maxTempRange * 9) / 5 + 32);
-
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-  unitElement.innerHTML = `${unit}`;
-
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-}
-
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  let unit = `°C`;
-  let unitElement = document.querySelector("#unit");
-  let temperatureElement = document.querySelector("#current-temp");
-
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-  unitElement.innerHTML = `${unit}`;
-
-  fahrenheitLink.classList.remove("active");
-  celsiusLink.classList.add("active");
-}
-
-let celsiusTemperature = null;
-let minTempRange = null;
-let maxTempRange = null;
-
 let todayDate = document.querySelector("#today");
 todayDate.innerHTML = formatDate(new Date());
 
@@ -199,11 +155,4 @@ searchForm.addEventListener("click", handleSubmit);
 let currentButton = document.querySelector("#btn-current");
 currentButton.addEventListener("click", getPosition);
 
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
-
 searchCity("London");
-displayForecast();
