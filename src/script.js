@@ -52,6 +52,36 @@ function formatDate() {
   return currentDateTime;
 }
 
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
+  let forecastHTML = `<div class= "row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+              <div class="forecast-days">${day}</div>
+              <div class="forecast-weather-emojis"><i class="fa-solid fa-sun"></i></div>
+              <div class="forecast-temp-range">
+                <span class="forecast-temp-range-min"> 20°</span>|<span
+                  class="forecast-temp-range-max"
+                  >25°</span>
+              </div>
+            </div>`;
+  });
+  forecastHTML = forecastHTML + `<div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "57821c3b75b60c68ecd1a8d0dd1aa8d3";
+  let apiEndpoint = "https://api.openweathermap.org/data/2.5/onecall?";
+  let apiUrl = `${apiEndpoint}lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayWeather(response) {
   let unit = `°C`;
   let unitElement = document.querySelector("#unit");
@@ -65,6 +95,19 @@ function displayWeather(response) {
   let maxTemp = Math.round(response.data.main.temp_max);
   let minTemp = Math.round(response.data.main.temp_min);
 
+  unitElement.innerHTML = `${unit}`;
+  currentTemperatureElement.innerHTML = Math.round(response.data.main.temp);
+  cityElement.innerHTML = response.data.name;
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  currentTempRangeElement.innerHTML = `${minTemp}°|${maxTemp}°`;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+
   celsiusTemperature = response.data.main.temp;
   minTempRange = response.data.main.temp_min;
   maxTempRange = response.data.main.temp_max;
@@ -74,18 +117,7 @@ function displayWeather(response) {
     celsiusLink.classList.add("active")
   );
 
-  unitElement.innerHTML = `${unit}`;
-  currentTemperatureElement.innerHTML = Math.round(response.data.main.temp);
-  cityElement.innerHTML = response.data.name;
-  descriptionElement.innerHTML = response.data.weather[0].description;
-  humidityElement.innerHTML = response.data.main.humidity;
-  windElement.innerHTML = Math.round(response.data.wind.speed);
-  currentTempRangeElement.innerHTML = `${minTemp}°|${maxTemp}°`;
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
-  iconElement.setAttribute("alt", response.data.weather[0].description);
+  getForecast(response.data.coord);
 }
 
 function searchCity(city) {
@@ -108,28 +140,6 @@ function retrievePosition(position) {
   let apiUrl = `${apiEndpoint}lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(displayWeather);
-}
-
-function displayForecast() {
-  let forecastElement = document.querySelector("#forecast");
-  let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-
-  let forecastHTML = `<div class= "row">`;
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col-2">
-              <div class="forecast-days">${day}</div>
-              <div class="forecast-weather-emojis"><i class="fa-solid fa-sun"></i></div>
-              <div class="forecast-temp-range">
-                <span class="forecast-temp-range-min"> 20°</span>|<span
-                  class="forecast-temp-range-max"
-                  >25°</span>
-              </div>
-            </div>`;
-  });
-  forecastHTML = forecastHTML + `<div>`;
-  forecastElement.innerHTML = forecastHTML;
 }
 
 function displayFahrenheitTemperature(event) {
