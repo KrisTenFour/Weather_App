@@ -91,7 +91,7 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 
-function getForecast(coordinates) {
+function retrieveForecast(coordinates) {
   let apiKey = "57821c3b75b60c68ecd1a8d0dd1aa8d3";
   let apiEndpoint = "https://api.openweathermap.org/data/2.5/onecall?";
   let apiUrl = `${apiEndpoint}lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
@@ -121,7 +121,7 @@ function displayWeather(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
-  getForecast(response.data.coord);
+  retrieveForecast(response.data.coord);
 }
 
 function searchCity(city) {
@@ -137,8 +137,8 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
-function getPosition(position) {
-  navigator.geolocation.getCurrentPosition(getPosition);
+function retrievePosition(position) {
+  navigator.geolocation.getCurrentPosition(retrievePosition);
   let apiKey = "e1c2feea6507de5a3f0b333f87c2c649";
   let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather?";
   let apiUrl = `${apiEndpoint}lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
@@ -153,6 +153,6 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("click", handleSubmit);
 
 let currentButton = document.querySelector("#btn-current");
-currentButton.addEventListener("click", getPosition);
+currentButton.addEventListener("click", retrievePosition);
 
 searchCity("London");
