@@ -133,8 +133,8 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
-function retrievePosition(position) {
-  navigator.geolocation.getCurrentPosition(retrievePosition);
+function getPosition(position) {
+  navigator.geolocation.getCurrentPosition(getPosition);
   let apiKey = "e1c2feea6507de5a3f0b333f87c2c649";
   let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather?";
   let apiUrl = `${apiEndpoint}lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
@@ -188,7 +188,7 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("click", handleSubmit);
 
 let currentButton = document.querySelector("#btn-current");
-currentButton.addEventListener("click", retrievePosition);
+currentButton.addEventListener("click", getPosition);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
