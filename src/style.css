@@ -31,8 +31,11 @@ p {
   margin-top: 100px;
   padding: 45px 25px 50px;
   border-radius: 25mm;
-  box-shadow: 1px 1px 10px #222121f1;
-  background: url("../images/container-image.jpg");
+  box-shadow: 1px 1px 10px rgba(81, 78, 78, 0.945);
+  background: url("../images/container-image.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .btn {
@@ -49,10 +52,11 @@ p {
   padding: 30px 16px 35px;
   border-radius: 5mm;
   box-shadow: 1px 2px 3px #424141;
-  background: linear-gradient(to top, #dadcdfc2 0%, #ece9e9 100%);
+  background: linear-gradient(to top, #dcdfe2 0%, #ece9e9 100%);
 }
 
 .main-heading {
+  margin-top: 8px;
   word-wrap: break-word;
   font-size: 52px;
   line-height: 1.5;
@@ -78,17 +82,19 @@ p {
 }
 
 .forecast-container {
-  margin: 15px 195px 9px;
-  padding: 2px 20px;
+  margin: 15px 175px 9px;
+  padding: 5px 20px;
   border-radius: 5mm;
   box-shadow: 1px 2px 5px #474747;
   background-color: #e0dfdfee;
   font-size: 16px;
 }
 
-.forecast-weather-emojis {
-  font-size: 40px;
-  color: #ffd500;
+.forecast-temp-range-max {
+  font-weight: bold;
+}
+.forecast-temp-range-min {
+  color: #686767;
 }
 
 #search-form {
@@ -100,7 +106,7 @@ p {
   padding: 8px;
   border: 0.3mm solid #e7e5e5;
   border-radius: 4mm;
-  box-shadow: 1px 1px 3px #464646f1;
+  box-shadow: 1px 1px 3px #676767f1;
   font-size: 14px;
 }
 
