@@ -107,7 +107,7 @@ function displayWeather(response) {
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity-level");
   let windElement = document.querySelector("#wind-level");
-  let iconElement = document.querySelector("#icon");
+  let iconElement = document.querySelector("#current-weather-icon");
 
   unitElement.innerHTML = `${unit}`;
   currentTemperatureElement.innerHTML = Math.round(response.data.main.temp);
