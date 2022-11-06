@@ -150,7 +150,7 @@ let todayDate = document.querySelector("#today");
 todayDate.innerHTML = formatDate(new Date());
 
 let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("click", handleSubmit);
+searchForm.addEventListener("submit", handleSubmit);
 
 let currentButton = document.querySelector("#btn-current");
 currentButton.addEventListener("click", retrievePosition);
