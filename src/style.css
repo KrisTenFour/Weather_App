@@ -166,7 +166,7 @@ p {
 
 @media (max-width: 880px) {
   .weather-app-container {
-    margin: 35px 10px;
+    margin: 35px 10px 0;
   }
 
   .form-wrapper {
