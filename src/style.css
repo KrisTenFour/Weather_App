@@ -78,8 +78,7 @@ p {
 }
 
 .current-city-container {
-  max-width: 600px;
-  margin: 25px auto 10px;
+  margin: 25px 100px 10px;
   padding: 30px 16px 35px;
   background: linear-gradient(to top, #dcdfe2 0%, #ece9e9 100%);
   box-shadow: 1px 2px 3px #424141;
@@ -120,8 +119,7 @@ p {
 }
 
 #search-form {
-  max-width: 350px;
-  margin: 10px auto 5px;
+  margin: 10px 235px 5px;
 }
 
 #enter-city {
