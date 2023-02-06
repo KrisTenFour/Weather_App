@@ -1,45 +1,6 @@
-a,
-p {
-  font-size: 12px;
-}
-
-a {
-  color: blue;
-  text-decoration: none;
-}
-
-a:hover {
-  color: blue;
-  text-decoration: underline;
-}
-
-p {
-  color: #EC6E4C;
-}
-
-.humidity-wind-container,
-#enter-city {
-  font-size: 14px;
-}
-
-.forecast-container,
-.sub-heading {
-  font-size: 16px;
-}
-
-.current-city-container,
-.forecast-container {
-  border-radius: 5mm;
-}
-
-#humidity-text,
-#wind-text {
-  color: #686767;
-}
-
-.humidity-icon,
-.wind-icon {
-  color: #474646b3;
+body {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
 }
 
 .body-night {
@@ -63,8 +24,6 @@ p {
   background-repeat: no-repeat;
   background-position: center;
   box-shadow: 1px 2px 8px #3a3939f1;
-  text-align: center;
-  font-family: "Roboto", sans-serif;
 }
 
 .form-wrapper {
@@ -159,6 +118,50 @@ p {
   max-width: 63px;
   margin-bottom: 5px;
   width: 50px;
+}
+
+a,
+p {
+  font-size: 12px;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+p {
+  color: #EC6E4C;
+}
+
+.humidity-wind-container,
+#enter-city {
+  font-size: 14px;
+}
+
+.forecast-container,
+.sub-heading {
+  font-size: 16px;
+}
+
+.current-city-container,
+.forecast-container {
+  border-radius: 5mm;
+}
+
+#humidity-text,
+#wind-text {
+  color: #686767;
+}
+
+.humidity-icon,
+.wind-icon {
+  color: #474646b3;
 }
 
 @media (max-width: 880px) {
